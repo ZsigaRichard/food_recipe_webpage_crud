@@ -1,0 +1,26 @@
+CREATE DATABASE Cookbook;
+USE Cookbook;
+
+CREATE TABLE recipes (
+    recipe_id INT AUTO_INCREMENT PRIMARY KEY,
+    recipe_name VARCHAR(255) NOT NULL,
+    duration INT, -- percben
+    type_of_dish VARCHAR(255), -- pl.: desszert, főétel, stb.
+    instructions TEXT,
+    calories INT,
+    serving TINYINT
+);
+CREATE TABLE ingredients (
+    ingredient_id INT AUTO_INCREMENT PRIMARY KEY,
+    recipe_id INT,
+    amount FLOAT,
+    unit VARCHAR(16),
+    ingredient_name VARCHAR(255),
+    optional BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (recipe_id) REFERENCES Recipes(recipe_id) ON DELETE CASCADE
+);
+CREATE TABLE calendar (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    date_of_dish DATE NOT NULL,
+    recipe_name VARCHAR(255)
+);

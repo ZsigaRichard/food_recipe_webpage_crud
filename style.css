@@ -1,0 +1,45 @@
+textarea{
+  height: 150px !important;
+}
+.modal-dialog {
+  --bs-modal-width:70vw;
+  margin: auto;
+  width: var(--bs-modal-width) !important; 
+}
+
+.sortable-ghost {
+  opacity: 1 !important; /* Ne legyen átlátszó */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Kis árnyék, hogy kiemelkedjen */
+  transform: scale(1.05); /* Kicsit nagyobb, mint az eredeti */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sortable-chosen {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.sortable-drag {
+  cursor: grabbing;
+}
+ #animation {
+      width: 300px;  /* animáció szélessége */
+      height: 300px; /* animáció magassága */
+
+    }
+  #animationContainer{
+     display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+@media (max-width: 575.5px) {
+  .xbutton {
+    order: -1;         /* első elem lesz */
+    align-self: flex-end; /* balra igazítva */
+  }
+  .modal-dialog {
+  --bs-modal-width:90vw;
+  margin: auto;
+  width: var(--bs-modal-width) !important; 
+}
+}
