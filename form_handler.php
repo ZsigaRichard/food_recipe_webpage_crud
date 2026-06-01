@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['recipe_name']) && isse
     // Alapadatok tisztítása
     $recipe_name = htmlspecialchars($_POST['recipe_name']);
     $instructions = isset($_POST['instructions']) ? htmlspecialchars($_POST['instructions']) : null;
-   $duration = isset($_POST['duration']) ? (int)$_POST['duration'] : null;
+    $duration = isset($_POST['duration']) ? (int)$_POST['duration'] : null;
     $calories = isset($_POST['calories']) ? htmlspecialchars($_POST['calories']) : null;
     $serving = isset($_POST['serving']) ? htmlspecialchars($_POST['serving']) : null;
     $type_of_dish = isset($_POST['type_of_dish']) ? htmlspecialchars($_POST['type_of_dish']) : null;
